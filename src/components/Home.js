@@ -31,8 +31,7 @@ class Home extends Component {
                 default:
             }
         };
-
-    render() {
+        render() {
         let dataSelect = ["week", "month", "year"];
         let userValue = JSON.parse(localStorage.getItem("user"));
         return (
@@ -46,7 +45,7 @@ class Home extends Component {
                                 <Box>
                                     <div className="d-flex justify-content-between align-items-center">
                                         <h3>Your Sales</h3>
-                                        <Select data={dataSelect} onChangeSelect={this.filterSalesPie}>
+                                        <Select data={dataSelect} onChoisePeriod={this.filterSalesPie}>
                                         </Select>
                                     </div>
                                     <ReactHighcharts config = {SalesChart} ref={(chart) => this.saleChart = chart}></ReactHighcharts>

@@ -3,7 +3,7 @@ import './Select.css';
 
 class Select extends Component {
     handleChange = (e) => {
-        this.props.onChangeSelect(e.target.value)
+        this.props.onChoisePeriod(e.target.value)
     };
     render() {
         return (
