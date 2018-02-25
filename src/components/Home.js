@@ -6,17 +6,33 @@ import ReactHighcharts from "react-highcharts";
 
 //config
 import SalesChart from "../config/pieChart.config";
+import ReportChart from "../config/graphChart.config";
 
 class Home extends Component {
 
-        filterSales = () => {
-            let lastWeek = [['Massive', 6], ['Attack', 3], ['Window', 9], ['Media', 9], ['Center', 9]];
-            let chart = this.props.salesPie.getChart();
-            chart.series[0].setData(lastWeek, true);
+        filterSalesPie = (bb) => {
+            console.log(this.reportChart);
+            let chart = this.reportChart.getChart();
+
+            let week = [['Massive', 3], ['Attack', 9], ['Window', 1], ['Media', 7], ['Center', 5]],
+                month = [['Massive', 6], ['Attack', 6], ['Window', 5], ['Media', 2], ['Center', 9]],
+                year = [['Massive', 9], ['Attack', 4], ['Window', 3], ['Media', 4], ['Center', 1]];
+
+            switch(bb) {
+                case "week" :
+                    chart.series[0].setData(week, true);
+                    break;
+                case "month" :
+                    chart.series[0].setData(month, true);
+                    break;
+                case "year" :
+                    chart.series[0].setData(year, true);
+                    break;
+            }
         };
 
     render() {
-        let dataSelect = ["Period: Last week", "Period: Last month", "Period: Last year"];
+        let dataSelect = ["week", "month", "year"];
         let userValue = JSON.parse(localStorage.getItem("user"));
         return (
             <div>
@@ -29,10 +45,10 @@ class Home extends Component {
                                 <Box>
                                     <div className="d-flex justify-content-between align-items-center">
                                         <h3>Your Sales</h3>
-                                        <Select data={dataSelect} onChange={this.filterSales}>
+                                        <Select data={dataSelect} onChangeSelect={this.filterSalesPie}>
                                         </Select>
                                     </div>
-                                    <ReactHighcharts config = {SalesChart} ref={(chart) => this.salesPie = chart}></ReactHighcharts>
+                                    <ReactHighcharts config = {SalesChart} ref={(chart) => this.reportChart = chart}></ReactHighcharts>
                                 </Box>
                             </div>
                         </div>
@@ -44,6 +60,7 @@ class Home extends Component {
                                         <Select data={dataSelect}>
                                         </Select>
                                     </div>
+                                    <ReactHighcharts config = {ReportChart} ref={(chart) => this.saleChart = chart}></ReactHighcharts>
                                 </Box>
                             </div>
                         </div>
