@@ -11,8 +11,8 @@ import ReportChart from "../config/graphChart.config";
 class Home extends Component {
 
         filterSalesPie = (bb) => {
-            console.log(this.reportChart);
-            let chart = this.reportChart.getChart();
+            console.log(this.saleChart);
+            let chart = this.saleChart.getChart();
 
             let week = [['Massive', 3], ['Attack', 9], ['Window', 1], ['Media', 7], ['Center', 5]],
                 month = [['Massive', 6], ['Attack', 6], ['Window', 5], ['Media', 2], ['Center', 9]],
@@ -28,6 +28,7 @@ class Home extends Component {
                 case "year" :
                     chart.series[0].setData(year, true);
                     break;
+                default:
             }
         };
 
@@ -48,7 +49,7 @@ class Home extends Component {
                                         <Select data={dataSelect} onChangeSelect={this.filterSalesPie}>
                                         </Select>
                                     </div>
-                                    <ReactHighcharts config = {SalesChart} ref={(chart) => this.reportChart = chart}></ReactHighcharts>
+                                    <ReactHighcharts config = {SalesChart} ref={(chart) => this.saleChart = chart}></ReactHighcharts>
                                 </Box>
                             </div>
                         </div>
@@ -60,7 +61,7 @@ class Home extends Component {
                                         <Select data={dataSelect}>
                                         </Select>
                                     </div>
-                                    <ReactHighcharts config = {ReportChart} ref={(chart) => this.saleChart = chart}></ReactHighcharts>
+                                    <ReactHighcharts config = {ReportChart} ref={(chart) => this.reportChart = chart}></ReactHighcharts>
                                 </Box>
                             </div>
                         </div>
