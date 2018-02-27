@@ -10,29 +10,49 @@ import ReportChart from "../config/graphChart.config";
 
 class Home extends Component {
 
-        filterSalesPie = (bb) => {
+        filterSales = (bb) => {
             console.log(this.saleChart);
-            let chart = this.saleChart.getChart();
-
-            let week = [['Websites', 3], ['logo', 9], ['Social Media', 1], ['Adwords', 7], ['E-Commere', 5]],
-                month = [['Websites', 6], ['logo', 6], ['Social Media', 5], ['Adwords', 2], ['E-Commere', 9]],
-                year = [['Websites', 9], ['logo', 4], ['Social Media', 3], ['Adwords', 4], ['E-Commere', 1]];
-
+            let sale = this.saleChart.getChart();
+            let saleWeek = [['Websites', 3], ['logo', 9], ['Social Media', 1], ['Adwords', 7], ['E-Commere', 5]],
+                saleMonth = [['Websites', 6], ['logo', 6], ['Social Media', 5], ['Adwords', 2], ['E-Commere', 9]],
+                saleYear = [['Websites', 9], ['logo', 4], ['Social Media', 3], ['Adwords', 4], ['E-Commere', 1]];
             switch(bb) {
-                case "week" :
-                    chart.series[0].setData(week, true);
+                case "Last week" :
+                    sale.series[0].setData(saleWeek, true);
                     break;
-                case "month" :
-                    chart.series[0].setData(month, true);
+                case "Last month" :
+                    sale.series[0].setData(saleMonth, true);
                     break;
-                case "year" :
-                    chart.series[0].setData(year, true);
+                case "Last year" :
+                    sale.series[0].setData(saleYear, true);
+                    break;
+                default:
+            }
+        };
+
+        filterReport = (aa) => {
+            let report = this.reportChart.getChart();
+            let reportWeek = [[0, 700], [9, 600], [15, 500], [21, 400], [27, 350], [33, 300], [39, 200],
+                [45, 100], [54, 180], [60, 250], [75, 400], [80, 450], [80, 450]];
+            let reportMonth = [[0, 100], [9, 300], [15, 350], [21, 400], [27, 200], [33, 300], [39, 500],
+                [45, 600], [54, 700], [60, 350], [75, 400], [80, 500], [80, 500]];
+            let reportYear = [[0, 500], [9, 600], [15, 700], [21, 300], [27, 200], [33, 100], [39, 50],
+                [45, 150], [54, 250], [60, 350], [75, 300], [80, 250], [80, 250]];
+            switch(aa) {
+                case "Last week" :
+                    report.series[0].setData(reportWeek, true);
+                    break;
+                case "Last month" :
+                    report.series[0].setData(reportMonth, true);
+                    break;
+                case "Last year" :
+                    report.series[0].setData(reportYear, true);
                     break;
                 default:
             }
         };
         render() {
-        let dataSelect = ["week", "month", "year"];
+        let dataSelect = ["Last week", "Last month", "Last year"];
         let userValue = JSON.parse(localStorage.getItem("user"));
         return (
             <div>
@@ -45,7 +65,7 @@ class Home extends Component {
                                 <Box>
                                     <div className="d-flex justify-content-between align-items-center">
                                         <h3>Your Sales</h3>
-                                        <Select data={dataSelect} onChoisePeriod={this.filterSalesPie}>
+                                        <Select data={dataSelect} onChoisePeriod={this.filterSales}>
                                         </Select>
                                     </div>
                                     <ReactHighcharts config = {SalesChart} ref={(chart) => this.saleChart = chart}></ReactHighcharts>
@@ -57,7 +77,7 @@ class Home extends Component {
                                 <Box>
                                     <div className="d-flex justify-content-between align-items-center">
                                         <h3>Report</h3>
-                                        <Select data={dataSelect}>
+                                        <Select data={dataSelect} onChoisePeriod={this.filterReport}>
                                         </Select>
                                     </div>
                                     <ReactHighcharts config = {ReportChart} ref={(chart) => this.reportChart = chart}></ReactHighcharts>
