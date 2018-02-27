@@ -14,9 +14,9 @@ class Home extends Component {
             console.log(this.saleChart);
             let chart = this.saleChart.getChart();
 
-            let week = [['Massive', 3], ['Attack', 9], ['Window', 1], ['Media', 7], ['Center', 5]],
-                month = [['Massive', 6], ['Attack', 6], ['Window', 5], ['Media', 2], ['Center', 9]],
-                year = [['Massive', 9], ['Attack', 4], ['Window', 3], ['Media', 4], ['Center', 1]];
+            let week = [['Websites', 3], ['logo', 9], ['Social Media', 1], ['Adwords', 7], ['E-Commere', 5]],
+                month = [['Websites', 6], ['logo', 6], ['Social Media', 5], ['Adwords', 2], ['E-Commere', 9]],
+                year = [['Websites', 9], ['logo', 4], ['Social Media', 3], ['Adwords', 4], ['E-Commere', 1]];
 
             switch(bb) {
                 case "week" :
