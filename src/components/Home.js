@@ -13,9 +13,9 @@ class Home extends Component {
         filterSales = (bb) => {
             console.log(this.saleChart);
             let sale = this.saleChart.getChart();
-            let saleWeek = [['Websites', 3], ['logo', 9], ['Social Media', 1], ['Adwords', 7], ['E-Commere', 5]],
-                saleMonth = [['Websites', 6], ['logo', 6], ['Social Media', 5], ['Adwords', 2], ['E-Commere', 9]],
-                saleYear = [['Websites', 9], ['logo', 4], ['Social Media', 3], ['Adwords', 4], ['E-Commere', 1]];
+            let saleWeek = [['Websites', 3], ['logo', 9], ['Social Media', 1], ['Adwords', 7], ['E-Commerce', 5]],
+                saleMonth = [['Websites', 6], ['logo', 6], ['Social Media', 5], ['Adwords', 2], ['E-Commerce', 9]],
+                saleYear = [['Websites', 9], ['logo', 4], ['Social Media', 3], ['Adwords', 4], ['E-Commerce', 1]];
             switch(bb) {
                 case "Last week" :
                     sale.series[0].setData(saleWeek, true);
