@@ -10,3 +10,8 @@
     font-size: 1.5rem;
     color: #8d97ab;
 }
+
+.Box .noGrid g.highcharts-axis.highcharts-xaxis, .Box .noGrid g.highcharts-grid.highcharts-yaxis-grid
+{
+    display: none;
+}

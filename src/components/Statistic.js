@@ -4,17 +4,21 @@ import Box from "./atoms/Box";
 import ReactHighcharts from "react-highcharts";
 
 //config
-import basicConfig from "../config/graphChart.config";
-import statisticsChart from "../config/statisticsChart.config";
-import TotalSales from "../config/totalSales.config";
-import ChanelSales from "../config/chanelSales.config";
-import WebSales from "../config/webSales.config";
+import basicConfig from "../config/homeReportChart.config";
+import statisticsChart from "../config/statisticActiveUsers.config";
+import TotalSales from "../config/statisticDirectSales.config";
+import ChanelSales from "../config/statisticChanelSales.config";
+import WebSales from "../config/statisticWebSales.config";
+import statisticTopSales from "../config/statisticTopSales.config";
+import statisticTopViews from "../config/statisticTopViews.config";
 
 class Statistic extends Component {
     render() {
         let stata = Object.assign ({}, basicConfig, statisticsChart );
         let chanelSales = Object.assign ({}, TotalSales, ChanelSales );
         let webSales = Object.assign ({}, TotalSales, WebSales);
+        let topSales = Object.assign ({}, basicConfig, statisticTopSales);
+        let topViews = Object.assign ({}, basicConfig, statisticTopViews);
         return (
             <div>
                 <Header>
@@ -23,6 +27,24 @@ class Statistic extends Component {
                     <div className="row activity">
                         <div className="col-12 col-md-5">
                             <div className="sales border">
+                                <Box>
+                                    <div className="d-flex justify-content-between align-items-center flex-sm-wrap">
+                                        <p className="text-secondary">3.230<span className="d-block">Views</span></p>
+                                        <div className="noGrid">
+                                            <ReactHighcharts config = {topSales}></ReactHighcharts>
+                                        </div>
+                                    </div>
+                                </Box>
+                            </div>
+                            <div className="views border">
+                                <Box>
+                                    <div className="d-flex justify-content-between align-items-center flex-sm-wrap">
+                                        <p className="text-secondary">1.560<span className="d-block">Sales</span></p>
+                                        <div className="noGrid">
+                                            <ReactHighcharts config = {topViews}></ReactHighcharts>
+                                        </div>
+                                    </div>
+                                </Box>
                             </div>
                         </div>
                         <div className="col-12 col-md-7">

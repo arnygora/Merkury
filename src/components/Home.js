@@ -5,8 +5,8 @@ import Select from "./atoms/Select";
 import ReactHighcharts from "react-highcharts";
 
 //config
-import SalesChart from "../config/pieChart.config";
-import ReportChart from "../config/graphChart.config";
+import SalesChart from "../config/homePieChart.config";
+import ReportChart from "../config/homeReportChart.config";
 
 class Home extends Component {
 
