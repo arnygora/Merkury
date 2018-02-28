@@ -5,7 +5,7 @@ import PrivateLayout from './components/PrivateLayout';
 import Home from './components/Home';
 import Workflow from './components/Workflow';
 import Statistic from './components/Statistic';
-import Calendar from './components/Calendar';
+import Calendar from './components/Calendar/Calendar';
 import Users from './components/Users';
 import Settings from './components/Settings';
 import AuthorizationPage from './components/AuthorizationPage';

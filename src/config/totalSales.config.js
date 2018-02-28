@@ -41,7 +41,7 @@ const TotalSales = {
         enabled: false
     },
     series: [{
-        rounded: true, //not work ! ! ! 
+        rounded: true, //not work ! ! !
         type: 'pie',
         name: 'Sales',
         innerSize: '75%',
