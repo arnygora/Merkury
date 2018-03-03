@@ -374,4 +374,48 @@ section select {
 
 .error-block .error-block_description p {
   color: #7e7e7e; }
+  
+.uno {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: url("../img/John-Doe.png") 77% 2% no-repeat;
+}
+.dos {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: url("../img/userPhoto.jpg") 72% 15% no-repeat;
+}
+.tres {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: url("../img/alex-smith.png") 65% 32% no-repeat;
+}
+.cuatro {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: url("../img/ann-clooney.png") 55% 2% no-repeat;
+}
+.cinco {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: url("../img/petric.png") 48% 2% no-repeat;
+}
+.seis {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: url("../img/nicky.png") 56% 0 no-repeat;
+}
+.ocho {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: url("../img/niga.png") 77% 2% no-repeat;
+}
+
 
