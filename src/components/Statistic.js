@@ -71,19 +71,19 @@ class Statistic extends Component {
                                 <div className="directSales">
                                     <ReactHighcharts config = {TotalSales}></ReactHighcharts>
                                 </div>
-                                <p className="text-secondary">2,300$<span className="d-block">Direct Sales</span></p>
+                                <p className="text-secondary">2,300$<span className="d-block small">Direct Sales</span></p>
                             </div>
                             <div className="col-12 col-md-5 col-lg-4 mx-auto d-flex justify-content-around align-items-center">
                                 <div className="channelSales">
                                     <ReactHighcharts config = {chanelSales}></ReactHighcharts>
                                 </div>
-                                <p className="text-secondary">980$<span className="d-block">Channel Sales</span></p>
+                                <p className="text-secondary">980$<span className="d-block small">Channel Sales</span></p>
                             </div>
                             <div className="col-12 col-md-8 mx-auto col-lg-4 d-flex justify-content-around align-items-center">
                                 <div className="userSales">
                                     <ReactHighcharts config = {webSales}></ReactHighcharts>
                                 </div>
-                                <p className="text-secondary">1,250$<span className="d-block">User Sales</span></p>
+                                <p className="text-secondary">1,250$<span className="d-block small">User Sales</span></p>
                             </div>
                         </div>
                     </div>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Header from "./Header";
 import Box from "./atoms/Box";
-import Select from "./atoms/Select";
+import Select from "./atoms/HomeSelect";
 import ReactHighcharts from "react-highcharts";
 
 //config

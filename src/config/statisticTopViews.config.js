@@ -16,7 +16,6 @@ const graphReport = {
     },
     xAxis: {
         gridLineWidth: 0,
-
         reversed: false,
         maxPadding: 0,
         showLastLabel: false,

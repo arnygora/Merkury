@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import './Select.css';
 
-class Select extends Component {
+class HomeSelect extends Component {
     handleChange = (e) => {
         this.props.onChoisePeriod(e.target.value)
     };
@@ -10,11 +9,11 @@ class Select extends Component {
             <select name="sel" id="sales" onChange={this.handleChange}>
                 {
                     this.props.data.map((item, index) => {
-                    return <option key={index} value={item}>{item}</option>
+                    return <option key={index} value={item}>{"Period: " + item}</option>
                     })
                 }
             </select>
         );
     }
 }
-export default Select;
+export default HomeSelect;
