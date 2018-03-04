@@ -89,40 +89,90 @@ class Home extends Component {
                             <div className="card">
                                 <ul className="list-group list-group-flush">
                                     <li className="list-group-item d-flex justify-content-between align-items-center">Tasks
-                                        <div>
-                                            <span className="bg-danger counter float-right mr-0">2</span>
+                                        <div><span className="bg-danger counter float-right mr-0">2</span>
                                             <span className="bg-primary counter float-right">5</span>
                                         </div>
                                     </li>
                                     <li className="list-group-item d-flex justify-content-between align-items-center">
-                                        <div>
-                                            <span className="bg-info counter float-left">N</span>New websites for Symo.com
+                                        <div><span className="bg-primary counter float-left">N</span>New websites for Symo.com
                                             <span className="far fa-clock text-danger"> 5 days dalays</span></div>
                                         <div className="col-1 dotLink">
                                             <a className="dotLink" href="">...</a>
                                         </div>
                                     </li>
-                                    <li className="list-group-item d-flex align-items-center">
-                                        <div>
-                                            <span className="bg-info counter float-left">N</span>Free business PSD Template
+                                    <li className="list-group-item d-flex justify-content-between align-items-center">
+                                        <div><span className="bg-primary counter float-left">F</span>Free business PSD Template
                                             <span className="far fa-clock text-danger"> 2 days dalays</span></div>
                                         <div className="col-1 dotLink">
                                             <a className="dotLink" href="">...</a>
                                         </div>
                                     </li>
-                                    <li className="list-group-item d-flex align-items-center"><span className="bg-info counter float-left">N</span>Vestibulum at eros</li>
-                                    <li className="list-group-item d-flex align-items-center"><span className="bg-info counter float-left">F</span>Vestibulum at eros</li>
+                                    <li className="list-group-item d-flex justify-content-between align-items-center">
+                                        <div><span className="bg-primary counter float-left">N</span>New logo for JCD.pl
+                                            <span className="far fa-clock text-secondary d-block"> 2 days left</span></div>
+                                        <div className="col-1 dotLink">
+                                            <a className="dotLink" href="">...</a>
+                                        </div>
+                                    </li>
+                                    <li className="list-group-item d-flex justify-content-between align-items-center">
+                                        <div><span className="bg-primary counter float-left">F</span>Free icons Set vol. 3
+                                            <span className="far fa-clock text-secondary d-block"> 2 days left</span></div>
+                                        <div className="col-1 dotLink">
+                                            <a className="dotLink" href="">...</a>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                         <div className="col-12 col-md-6 col-lg-4 mb-3">
                             <div className="card">
                                 <ul className="list-group list-group-flush">
-                                    <li className="list-group-item">Messages<span className="bg-info counter float-right">2</span></li>
-                                    <li className="list-group-item d-flex align-items-center"><span className="userPhoto"></span>Dapibus ac facilisis in</li>
-                                    <li className="list-group-item d-flex align-items-center"><span className="userPhoto"></span>Vestibulum at eros</li>
-                                    <li className="list-group-item d-flex align-items-center"><span className="userPhoto"></span>Vestibulum at eros</li>
-                                    <li className="list-group-item d-flex align-items-center"><span className="userPhoto"></span>Vestibulum at eros</li>
+                                    <li className="list-group-item d-flex justify-content-between align-items-center">Messages
+                                        <span className="bg-primary counter float-right mr-0">2</span></li>
+                                    <li className="list-group-item d-flex align-items-center">
+                                        <div className="tres mr-3 userPhoto"></div>
+                                        <div className="d-flex flex-column messagesItemText">
+                                            <p className="m-0">Nina Jones <span className="text-secondary">5 minutes ago</span></p>
+                                            <p className="m-0">Hey You! It's me again :-)</p>
+                                            <div>
+                                                <a className="text-secondary mr-3" href=""><span className="fas fa-hand-point-left"></span></a>
+                                                <a className="text-secondary" href=""><span className="fas fa-cog"></span></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li className="list-group-item d-flex align-items-center">
+                                        <div className="seis mr-3 userPhoto"></div>
+                                        <div className="d-flex flex-column messagesItemText">
+                                            <p className="m-0">Nina Jones <span className="text-secondary">About 20 hours ago</span></p>
+                                            <p className="m-0">Wathaaaa!!!</p>
+                                            <div>
+                                                <a className="text-secondary mr-3" href=""><span className="fas fa-hand-point-left"></span></a>
+                                                <a className="text-secondary" href=""><span className="fas fa-cog"></span></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li className="list-group-item d-flex align-items-center">
+                                        <div className="ocho mr-3 userPhoto"></div>
+                                        <div className="d-flex flex-column messagesItemText">
+                                            <p className="m-0">Olivia Wild <span className="text-secondary">2 days ago</span></p>
+                                            <p className="m-0">Good morning</p>
+                                            <div>
+                                                <a className="text-secondary mr-3" href=""><span className="fas fa-hand-point-left"></span></a>
+                                                <a className="text-secondary" href=""><span className="fas fa-cog"></span></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li className="list-group-item d-flex align-items-center">
+                                        <div className="cinco mr-3 userPhoto"></div>
+                                        <div className="d-flex flex-column messagesItemText">
+                                            <p className="m-0">Jane Baron <span className="text-secondary">About 2 weeks ago</span></p>
+                                            <p className="m-0">Hello! Could you bring me coffee?</p>
+                                            <div>
+                                                <a className="text-secondary mr-3" href=""><span className="fas fa-hand-point-left"></span></a>
+                                                <a className="text-secondary" href=""><span className="fas fa-cog"></span></a>
+                                            </div>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
