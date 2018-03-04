@@ -56,7 +56,7 @@ class Home extends Component {
         return (
             <div>
                 <Header history={this.props.history} >
-                <section>
+                <section className="container">
                     <p>Hello, {userValue}!</p>
                     <div className="row activity m-0">
                         <div className="col-12 col-md-5 p-2">
