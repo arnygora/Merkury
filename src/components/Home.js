@@ -179,11 +179,35 @@ class Home extends Component {
                         <div className="col-12 col-md-10 col-lg-4 mx-auto mb-3">
                             <div className="card">
                                 <ul className="list-group list-group-flush">
-                                    <li className="list-group-item">Activity<span className="bg-info counter float-right">10</span></li>
-                                    <li className="list-group-item d-flex align-items-center"><span className="userPhoto2"></span>Dapibus ac facilisis in</li>
-                                    <li className="list-group-item d-flex align-items-center"><span className="userPhoto2"></span>Vestibulum at eros</li>
-                                    <li className="list-group-item d-flex align-items-center"><span className="userPhoto2"></span>Vestibulum at eros</li>
-                                    <li className="list-group-item d-flex align-items-center"><span className="userPhoto2"></span>Vestibulum at eros</li>
+                                    <li className="list-group-item d-flex justify-content-between align-items-center">Activity<span className="bg-primary counter float-right mr-0">10</span></li>
+                                    <li className="list-group-item d-flex align-items-center">
+                                        <div className="ocho mr-3 userPhoto"></div>
+                                        <div className="d-flex flex-column messagesItemText">
+                                            <p className="m-0">Nina Jones <span className="text-secondary">added a new project</span> Free UI Kit</p>
+                                            <p className="far fa-clock text-secondary m-0"> Just now</p>
+                                        </div>
+                                    </li>
+                                    <li className="list-group-item d-flex align-items-center">
+                                        <div className="cinco mr-3 userPhoto"></div>
+                                        <div className="d-flex flex-column messagesItemText">
+                                            <p className="m-0">James Swith <span className="text-secondary">commented project</span> Free PSD Tamplate</p>
+                                            <p className="far fa-clock text-secondary m-0"> 40 minutes ago</p>
+                                        </div>
+                                    </li>
+                                    <li className="list-group-item d-flex align-items-center">
+                                        <div className="uno mr-3 userPhoto"></div>
+                                        <div className="d-flex flex-column messagesItemText">
+                                            <p className="m-0">Alex Clooney <span className="text-secondary"> completed task </span>Symo Website</p>
+                                            <p className="far fa-clock text-secondary m-0"> 1 hour ago</p>
+                                        </div>
+                                    </li>
+                                    <li className="list-group-item d-flex align-items-center">
+                                        <div className="seis mr-3 userPhoto"></div>
+                                        <div className="d-flex flex-column messagesItemText">
+                                            <p className="m-0">Alexandra Spears <span className="text-secondary">added a new project</span> Free PSD</p>
+                                            <p className="far fa-clock text-secondary m-0"> 3 hours ago</p>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
