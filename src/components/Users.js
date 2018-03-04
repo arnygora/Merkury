@@ -5,13 +5,73 @@ import PageNavigation from './atoms/UsersPageNav';
 
 class Users extends React.Component {
     render() {
+
         let UserSort = ["Active first", "New users", "Most active"];
+        let UserList = [
+            {
+                divForPhoto: 'uno',
+                userName: 'John Doe',
+                position: 'CEO',
+                status: 'Online now',
+                email: 'example@ukr.net',
+                phoneNumber: '(067) 22 30 841'
+            },
+            {
+                divForPhoto: 'dos',
+                userName: 'Nina Jones',
+                position: 'UX Designer',
+                status: 'Online now',
+                email: 'jhhokm@top.net',
+                phoneNumber: '(066) 52 72 841'
+            },
+            {
+                divForPhoto: 'tres',
+                userName: 'Ann Clooney',
+                position: 'Account Manager',
+                status: 'Online now',
+                email: 'sbserbse@re.net',
+                phoneNumber: '(061) 23 98 888'
+            },
+            {
+                divForPhoto: 'cuatro',
+                userName: 'Patric Smith',
+                position: 'Project Manager',
+                status: '30 minutes ago',
+                email: 'dvvvwvwwe@rrr.net',
+                phoneNumber: '(055) 12 33 333'
+            },
+            {
+                divForPhoto: 'cinco',
+                userName: 'Nicky Hunt',
+                position: 'Product Designer',
+                status: '40 minutes ago',
+                email: 'vwaefreb@ukr.rvv',
+                phoneNumber: '(078) 66 30 555'
+            },
+            {
+                divForPhoto: 'seis',
+                userName: 'Jane Doe',
+                position: 'Graphic Designer',
+                status: '1 hour ago',
+                email: 'poom@ukr.net',
+                phoneNumber: '(011) 22 30 888'
+            },
+            {
+                divForPhoto: 'ocho',
+                userName: 'Alex Smith',
+                position: 'Web Designer',
+                status: '2 hours ago',
+                email: 'rvvr@ukr.www',
+                phoneNumber: '(067) 22 30 841'
+            },
+        ];
+        let userCount = UserList.length;
         return (
             <div>
                 <Header>
                     <section>
                         <div className="d-flex justify-content-between align-items-center">
-                            <p>Users</p>
+                            <p>Users <span className="text-secondary">({userCount})</span></p>
                             <Select sort={UserSort} />
                         </div>
                         <ul>
@@ -25,76 +85,22 @@ class Users extends React.Component {
                         </ul>
                         <div className="bg-white">
                             <ul>
-                                <li className="row p-3 border m-0 align-items-center userItem">
-                                    <div className="col-lg-5 d-flex align-items-center">
-                                        <div className="uno"></div>
-                                        <p className="small pl-3 mb-0">John Doe<span className="d-block text-secondary">CEO</span></p>
-                                    </div>
-                                    <div className="col-lg-2 activity border-left-1"><span className="far fa-clock text-success">Online now</span></div>
-                                    <div className="col-lg-2 mail">arnygora@gmail.com</div>
-                                    <div className="col-lg-2 phone">(067) 22 30 840</div>
-                                    <div className="col-lg-1 "></div>
-                                </li>
-                                <li className="row p-3 border border-bottom-0 m-0 align-items-center userItem">
-                                    <div className="col-lg-5 d-flex align-items-center">
-                                        <div className="dos"></div>
-                                        <p className="small pl-3 mb-0">Nina Jones<span className="d-block text-secondary">UX Designer</span></p>
-                                    </div>
-                                    <div className="col-lg-2 activity"><span className="far fa-clock text-success">Online now</span></div>
-                                    <div className="col-lg-2 mail">arnygora@gmail.com</div>
-                                    <div className="col-lg-2 phone">(066) 22 30 548</div>
-                                    <div className="col-lg-1"></div>
-                                </li>
-                                <li className="row p-3 border border-bottom-0 m-0 align-items-center userItem">
-                                    <div className="col-lg-5 d-flex align-items-center">
-                                        <div className="tres"></div>
-                                        <p className="small pl-3 mb-0">Ann Clooney<span className="d-block text-secondary">Account Manager</span></p>
-                                    </div>
-                                    <div className="col-lg-2 activity"><span className="far fa-clock text-success">Online now</span></div>
-                                    <div className="col-lg-2 mail">arnygora@gmail.com</div>
-                                    <div className="col-lg-2 phone">(065) 54 30 555</div>
-                                    <div className="col-lg-1"></div>
-                                </li>
-                                <li className="row p-3 border border-bottom-0 m-0 align-items-center userItem">
-                                    <div className="col-lg-5 d-flex align-items-center">
-                                        <div className="cuatro"></div>
-                                        <p className="small pl-3 mb-0">Patric Smith<span className="d-block text-secondary">Project Manager</span></p>
-                                    </div>
-                                    <div className="col-lg-2 activity"><span className="far fa-clock text-secondary">30 minutes ago</span></div>
-                                    <div className="col-lg-2 mail">arnygora@gmail.com</div>
-                                    <div className="col-lg-2 phone">(067) 58 95 999</div>
-                                    <div className="col-lg-1"></div>
-                                </li>
-                                <li className="row p-3 border border-bottom-0 m-0 align-items-center userItem">
-                                    <div className="col-lg-5 d-flex align-items-center">
-                                        <div className="cinco"></div>
-                                        <p className="small pl-3 mb-0">Nicky Hunt<span className="d-block text-secondary">Product Designer</span></p>
-                                    </div>
-                                    <div className="col-lg-2 activity"><span className="far fa-clock text-secondary">40 minutes ago</span></div>
-                                    <div className="col-lg-2 mail">arnygora@gmail.com</div>
-                                    <div className="col-lg-2 phone">(099) 22 30 236</div>
-                                    <div className="col-lg-1"></div>
-                                </li>
-                                <li className="row p-3 border border-bottom-0 m-0 align-items-center userItem">
-                                    <div className="col-lg-5 d-flex align-items-center">
-                                        <div className="seis"></div>
-                                        <p className="small pl-3 mb-0">Jane Doe<span className="d-block text-secondary">Graphic Designer</span></p>
-                                    </div>
-                                    <div className="col-lg-2 activity"><span className="far fa-clock text-secondary">1 hour ago</span></div>
-                                    <div className="col-lg-2 mail">arnygora@gmail.com</div>
-                                    <div className="col-lg-2 phone">(088) 36 30 958</div>
-                                    <div className="col-lg-1"></div>
-                                </li>
-                                <li className="row p-3 border border-bottom-1 m-0 align-items-center userItem">
-                                    <div className="col-lg-5 d-flex align-items-center">
-                                        <div className="ocho"></div>
-                                        <p className="small pl-3 mb-0">Jane Doe<span className="d-block text-secondary">CEO</span></p>
-                                    </div>
-                                    <div className="col-lg-2 activity"><span className="far fa-clock text-secondary">2 hours ago</span></div>
-                                    <div className="col-lg-2 mail">arnygora@gmail.com</div>
-                                    <div className="col-lg-2 phone">(098) 52 30 877</div>
-                                    <div className="col-lg-1 "></div>
-                                </li>
+                                {
+                                    UserList.map((item, index) => {
+                                        return (
+                                            <li key={index} className="row p-3 border m-0 align-items-center userItem">
+                                                <div className="col-lg-5 d-flex align-items-center">
+                                                <div className={item.divForPhoto}></div>
+                                                    <p className="small pl-3 mb-0">{item.userName}<span className="d-block text-secondary">{item.position}</span></p>
+                                                </div>
+                                                <div className="col-lg-2 activity border-left-1"><span className="far fa-clock">{' ' + item.status}</span></div>
+                                                <div className="col-lg-2 mail">{item.email}</div>
+                                                <div className="col-lg-2 phone">{item.phoneNumber}</div>
+                                                <div className="col-lg-1 "></div>
+                                            </li>
+                                        );
+                                    })
+                                };
                             </ul>
                         </div>
                         <PageNavigation />
