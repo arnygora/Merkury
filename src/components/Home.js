@@ -9,7 +9,6 @@ import SalesChart from "../config/homePieChart.config";
 import ReportChart from "../config/homeReportChart.config";
 
 class Home extends Component {
-
         filterSales = (bb) => {
             console.log(this.saleChart);
             let sale = this.saleChart.getChart();
@@ -63,7 +62,7 @@ class Home extends Component {
                         <div className="col-12 col-md-5 p-2">
                             <div className="sales">
                                 <Box>
-                                    <div className="d-flex justify-content-between align-items-center">
+                                    <div className="d-flex flex-wrap justify-content-between align-items-center">
                                         <h3>Your Sales</h3>
                                         <Select data={dataSelect} onChoisePeriod={this.filterSales}>
                                         </Select>
@@ -75,7 +74,7 @@ class Home extends Component {
                         <div className="col-12 col-md-7 p-2">
                             <div className="period">
                                 <Box>
-                                    <div className="d-flex justify-content-between align-items-center">
+                                    <div className="d-flex flex-wrap justify-content-between align-items-center">
                                         <h3>Report</h3>
                                         <Select data={dataSelect} onChoisePeriod={this.filterReport}>
                                         </Select>
@@ -89,9 +88,28 @@ class Home extends Component {
                         <div className="col-12 col-md-6 col-lg-4 mb-3">
                             <div className="card">
                                 <ul className="list-group list-group-flush">
-                                    <li className="list-group-item">Tasks<span className="bg-info counter float-right">5</span><span className="bg-danger counter float-right">2</span></li>
-                                    <li className="list-group-item d-flex align-items-center"><span className="bg-info counter float-left">N</span>Dapibus ac facilisis ins</li>
-                                    <li className="list-group-item d-flex align-items-center"><span className="bg-info counter float-left">F</span>Vestibulum at eros</li>
+                                    <li className="list-group-item d-flex justify-content-between align-items-center">Tasks
+                                        <div>
+                                            <span className="bg-danger counter float-right mr-0">2</span>
+                                            <span className="bg-primary counter float-right">5</span>
+                                        </div>
+                                    </li>
+                                    <li className="list-group-item d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span className="bg-info counter float-left">N</span>New websites for Symo.com
+                                            <span className="far fa-clock text-danger"> 5 days dalays</span></div>
+                                        <div className="col-1 dotLink">
+                                            <a className="dotLink" href="">...</a>
+                                        </div>
+                                    </li>
+                                    <li className="list-group-item d-flex align-items-center">
+                                        <div>
+                                            <span className="bg-info counter float-left">N</span>Free business PSD Template
+                                            <span className="far fa-clock text-danger"> 2 days dalays</span></div>
+                                        <div className="col-1 dotLink">
+                                            <a className="dotLink" href="">...</a>
+                                        </div>
+                                    </li>
                                     <li className="list-group-item d-flex align-items-center"><span className="bg-info counter float-left">N</span>Vestibulum at eros</li>
                                     <li className="list-group-item d-flex align-items-center"><span className="bg-info counter float-left">F</span>Vestibulum at eros</li>
                                 </ul>

@@ -422,4 +422,23 @@ li.userItem:hover {
   background: url("../img/niga.png") 77% 2% no-repeat;
 }
 
+a.dotLink {
+  display: inline-block;
+  margin: 0 auto;
+  letter-spacing: -2px;
+  font-size: 2em;
+  color: #7e7e7e;
+  transform: rotate(90deg);
+  transition: letter-spacing .2s ease-in-out;
+}
+a.dotLink:hover {
+  letter-spacing: 2px;
+  color: #5584ff;
+}
 
+
+  @media screen and (max-width: 736px) {
+    .usersList div.activity, li.tableHeader, div.dotLink {
+      display: none;
+    }
+  }
