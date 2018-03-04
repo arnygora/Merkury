@@ -4338,10 +4338,10 @@ tbody.collapse.show {
 .page-link {
   position: relative;
   display: block;
-  padding: 0.5rem 0.75rem;
+  padding: 0.3rem 0.5rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #007bff;
+  color: #848484;
   background-color: #fff;
   border: 1px solid #ddd;
 }
