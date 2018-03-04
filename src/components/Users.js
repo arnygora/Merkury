@@ -69,7 +69,7 @@ class Users extends React.Component {
         return (
             <div>
                 <Header>
-                    <section className="container">
+                    <section>
                         <div className="d-flex justify-content-between align-items-center">
                             <p>Users <span className="text-secondary">({userCount})</span></p>
                             <Select sort={UserSort} />
