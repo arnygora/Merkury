@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import './calendar.css';
 import Header from '../Header';
+import MyEvents from '../../config/CalendarEvents';
 import BigCalendar from 'react-big-calendar';
 import moment from 'moment';
 
@@ -15,9 +16,10 @@ class Calendar extends Component {
                     <section>
                         <div className="calendar">
                             <BigCalendar
-                                events={[]}
-                                startAccessor='startDate'
-                                endAccessor='endDate'
+                                events={MyEvents}
+                                step={60}
+                                showMultiDayTimes
+                                defaultDate={new Date(2018, 2, 1)}
                             />
                         </div>
                     </section>
