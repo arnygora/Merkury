@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import './calendar.css';
 import Header from '../Header';
-import MyEvents from '../../config/CalendarEvents';
+import MyEvents from './CalendarEvents';
 import BigCalendar from 'react-big-calendar';
 import moment from 'moment';
 
