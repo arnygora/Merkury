@@ -11,7 +11,7 @@ class Workflow extends Component {
                     <div className="row">
                         <div className="col-12 col-md-6 col-lg-4">
                             <p>To Do <span className="text-secondary">(7)</span>
-                                <a href="#0"><span className="fas fa-angle-right text-secondary float-right"></span></a>
+                                <span className="fas fa-angle-right text-secondary float-right"></span>
                             </p>
                             <ul className="list-group list-group-flush">
                                 {
@@ -33,7 +33,7 @@ class Workflow extends Component {
                         </div>
                         <div className="col-12 col-md-6 col-lg-4">
                             <p>In Progress <span className="text-secondary">(3)</span>
-                                <a href="#0"><span className="fas fa-angle-right text-secondary float-right"></span></a>
+                                <span className="fas fa-angle-right text-secondary float-right"></span>
                             </p>
                             <ul className="list-group list-group-flush">
                                 {
@@ -55,7 +55,7 @@ class Workflow extends Component {
                         </div>
                         <div className="col-12 col-md-10 col-lg-4 mx-auto">
                             <p>Completed <span className="text-secondary">(5)</span>
-                                <a href="#0"><span className="fas fa-angle-right text-secondary float-right"></span></a>
+                                <span className="fas fa-angle-right text-secondary float-right"></span>
                             </p>
                             <ul className="list-group list-group-flush">
                                 {
