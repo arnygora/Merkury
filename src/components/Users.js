@@ -1,70 +1,12 @@
 import React from 'react';
 import Header from './Header';
 import Select from './atoms/UsersSelect';
+import UserList from '../config/usersData';
 import PageNavigation from './atoms/UsersPageNav';
 
 class Users extends React.Component {
     render() {
-
         let UserSort = ["Active first", "New users", "Most active"];
-        let UserList = [
-            {
-                divForPhoto: 'uno',
-                userName: 'John Doe',
-                position: 'CEO',
-                status: 'Online now',
-                email: 'example@ukr.net',
-                phoneNumber: '(067) 22 30 841'
-            },
-            {
-                divForPhoto: 'dos',
-                userName: 'Nina Jones',
-                position: 'UX Designer',
-                status: 'Online now',
-                email: 'jhhokm@top.net',
-                phoneNumber: '(066) 52 72 841'
-            },
-            {
-                divForPhoto: 'tres',
-                userName: 'Ann Clooney',
-                position: 'Account Manager',
-                status: 'Online now',
-                email: 'sbserbse@re.net',
-                phoneNumber: '(061) 23 98 888'
-            },
-            {
-                divForPhoto: 'cuatro',
-                userName: 'Patric Smith',
-                position: 'Project Manager',
-                status: '30 minutes ago',
-                email: 'dvvvwvwwe@rrr.net',
-                phoneNumber: '(055) 12 33 333'
-            },
-            {
-                divForPhoto: 'cinco',
-                userName: 'Nicky Hunt',
-                position: 'Product Designer',
-                status: '40 minutes ago',
-                email: 'vwaefreb@ukr.rvv',
-                phoneNumber: '(078) 66 30 555'
-            },
-            {
-                divForPhoto: 'seis',
-                userName: 'Jane Doe',
-                position: 'Graphic Designer',
-                status: '1 hour ago',
-                email: 'poom@ukr.net',
-                phoneNumber: '(011) 22 30 888'
-            },
-            {
-                divForPhoto: 'ocho',
-                userName: 'Alex Smith',
-                position: 'Web Designer',
-                status: '2 hours ago',
-                email: 'rvvr@ukr.www',
-                phoneNumber: '(067) 22 30 841'
-            },
-        ];
         let userCount = UserList.length;
         return (
             <div>
