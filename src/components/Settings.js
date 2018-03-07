@@ -7,7 +7,7 @@ class Settings extends Component {
             <div>
                 <Header>
                     <section>
-                        <p>Settings</p>
+                        <h4>Settings</h4>
                     </section>
                 </Header>
             </div>

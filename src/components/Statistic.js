@@ -23,7 +23,7 @@ class Statistic extends Component {
             <div>
                 <Header>
                 <section>
-                    <p>Lorem Ipsum Stats</p>
+                    <h4>Lorem Ipsum Stats</h4>
                     <div className="row activity">
                         <div className="col-12 col-md-5">
                             <div className="sales border">

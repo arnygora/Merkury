@@ -34,7 +34,7 @@ class Header extends Component {
                                         <li><Link to="/statistics"><span className="fas fa-chart-line"><span className="smallScreen">Statistics</span></span></Link></li>
                                         <li><Link to="/calendar"><span className="fas fa-calendar-alt"><span className="smallScreen">Calendar</span></span></Link></li>
                                         <li><Link to="/users"><span className="fas fa-user"><span className="smallScreen">Users</span></span></Link></li>
-                                        <li><Link to="/settings"><span className="fas fa-cog"><span className="smallScreen">Settings</span></span></Link></li>
+                                        <li><Link to="/settings"><span className="fas fa-cog"><span className="smallScreen">UsersTestPage</span></span></Link></li>
                                     </ul>
                                 </nav>
                             </aside>

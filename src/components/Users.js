@@ -2,19 +2,18 @@ import React from 'react';
 import Header from './Header';
 import Select from './atoms/UsersSelect';
 import UserList from '../config/usersData';
-import PageNavigation from './atoms/UsersPageNav';
 
 class Users extends React.Component {
     render() {
-        let UserSort = ["Active first", "New users", "Most active"];
+        let UserSort = ["All users", "Active first", "Offline"];
         let userCount = UserList.length;
         return (
             <div>
                 <Header>
                     <section>
                         <div className="d-flex justify-content-between align-items-center">
-                            <p>Users <span className="text-secondary">({userCount})</span></p>
-                            <Select sort={UserSort} />
+                            <h4>Users <span className="text-secondary">({userCount})</span></h4>
+                            <Select data={UserSort} onSortByFilter={this.FilterUsers}/>
                         </div>
                         <ul>
                             <li className="row text-secondary tableHeader">
@@ -47,12 +46,10 @@ class Users extends React.Component {
                                 }
                             </ul>
                         </div>
-                        <PageNavigation />
                     </section>
                 </Header>
             </div>
         );
     }
 }
-
 export default Users;

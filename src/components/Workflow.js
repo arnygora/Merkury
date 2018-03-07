@@ -10,17 +10,17 @@ class Workflow extends Component {
                 <section>
                     <div className="row">
                         <div className="col-12 col-md-6 col-lg-4">
-                            <p>To Do <span className="text-secondary">(7)</span>
+                            <h4 className="d-flex justify-content-between align-items-center">To Do({Tasks.map.length})<span className="text-secondary"></span>
                                 <span className="fas fa-angle-right text-secondary float-right"></span>
-                            </p>
+                            </h4>
                             <ul className="list-group list-group-flush">
                                 {
                                     Tasks.map ((item, index) => {
                                         return (
                                             <li key={index}
                                                 className="list-group-item d-flex justify-content-between align-items-center mb-2 border">
-                                                <div><span className="bg-primary counter float-left"></span>{item.title}
-                                                    <span className="far fa-clock text-secondary d-block">{item.status}</span>
+                                                <div><span className="bg-primary counter float-left">{(item.title).charAt(0)}</span>{item.title}
+                                                    <span className="far fa-clock text-secondary d-block"> {item.status}</span>
                                                 </div>
                                                 <div className="col-1 dotLink">
                                                     <a className="dotLink" href="">...</a>
@@ -32,17 +32,17 @@ class Workflow extends Component {
                             </ul>
                         </div>
                         <div className="col-12 col-md-6 col-lg-4">
-                            <p>In Progress <span className="text-secondary">(3)</span>
+                            <h4 className="d-flex justify-content-between align-items-center">In Progress <span className="text-secondary"></span>
                                 <span className="fas fa-angle-right text-secondary float-right"></span>
-                            </p>
+                            </h4>
                             <ul className="list-group list-group-flush">
                                 {
                                     Tasks.map ((item, index) => {
                                         return (
                                             <li key={index}
                                                 className="list-group-item d-flex justify-content-between align-items-center mb-2 border">
-                                                <div><span className="bg-primary counter float-left"></span>{item.title}
-                                                    <span className="far fa-clock text-secondary d-block">{item.status}</span>
+                                                <div><span className="bg-primary counter float-left">{(item.title).charAt(0)}</span>{item.title}
+                                                    <span className="far fa-clock text-secondary d-block"> {item.status}</span>
                                                 </div>
                                                 <div className="col-1 dotLink">
                                                     <a className="dotLink" href="">...</a>
@@ -54,17 +54,17 @@ class Workflow extends Component {
                             </ul>
                         </div>
                         <div className="col-12 col-md-10 col-lg-4 mx-auto">
-                            <p>Completed <span className="text-secondary">(5)</span>
+                            <h4 className="d-flex justify-content-between align-items-center">Completed <span className="text-secondary"></span>
                                 <span className="fas fa-angle-right text-secondary float-right"></span>
-                            </p>
+                            </h4>
                             <ul className="list-group list-group-flush">
                                 {
                                     Tasks.map ((item, index) => {
                                         return (
                                             <li key={index}
                                                 className="list-group-item d-flex justify-content-between align-items-center mb-2 border">
-                                                <div><span className="bg-primary counter float-left"></span>{item.title}
-                                                    <span className="far fa-clock text-secondary d-block">{item.status}</span>
+                                                <div><span className="bg-primary counter float-left">{(item.title).charAt(0)}</span>{item.title}
+                                                    <span className="far fa-clock text-secondary d-block"> {item.status}</span>
                                                 </div>
                                                 <div className="col-1 dotLink">
                                                     <a className="dotLink" href="">...</a>

@@ -5,7 +5,7 @@ import Select from "./atoms/HomeSelect";
 import ReactHighcharts from "react-highcharts";
 
 //config
-import SalesChart from "../config/homePieChart.config";
+import SalesChart from "../config/homeSalesChart.config";
 import ReportChart from "../config/homeReportChart.config";
 import UserList from "../config/usersData";
 import Tasks from "../config/workflowData";
@@ -59,7 +59,7 @@ class Home extends Component {
             <div>
                 <Header history={this.props.history} >
                 <section>
-                    <p>Hello, {userValue}!</p>
+                    <h4>Hello, {userValue}!</h4>
                     <div className="row activity m-0">
                         <div className="col-12 col-md-5 p-2">
                             <div className="sales">
@@ -97,17 +97,19 @@ class Home extends Component {
                                     </li>
                                     {
                                         Tasks.map ((item, index) => {
+                                            if (index < 4) {
                                             return (
                                                 <li key={index}
                                                     className="list-group-item d-flex justify-content-between align-items-center">
-                                                    <div><span className="bg-primary counter float-left"></span>{item.title}
-                                                        <span className="far fa-clock text-secondary d-block">{item.status}</span>
+                                                    <div><span className="bg-primary counter float-left">{(item.title).charAt(0)}</span>{item.title}
+                                                        <span className="far fa-clock text-secondary d-block"> {item.status}</span>
                                                     </div>
                                                     <div className="col-1 dotLink">
                                                         <a className="dotLink" href="">...</a>
                                                     </div>
                                                 </li>
-                                            );
+                                            )}
+                                            return null
                                         })
                                     }
                                 </ul>
@@ -120,6 +122,7 @@ class Home extends Component {
                                         <span className="bg-primary counter float-right mr-0">2</span></li>
                                         {
                                         UserList.map((item, index) => {
+                                            if (index < 4) {
                                             return (
                                                 <li key={index} className="list-group-item d-flex align-items-center">
                                                     <div className={item.divForPhoto + ' mr-3 userPhoto'}></div>
@@ -132,7 +135,8 @@ class Home extends Component {
                                                         </div>
                                                     </div>
                                                 </li>
-                                                );
+                                                )}
+                                                return null
                                             })
                                         }
                                 </ul>
@@ -144,6 +148,7 @@ class Home extends Component {
                                     <li className="list-group-item d-flex justify-content-between align-items-center">Activity<span className="bg-primary counter float-right mr-0">10</span></li>
                                     {
                                     UserList.map((item, index) => {
+                                        if (index < 4) {
                                         return (
                                             <li key={index} className="list-group-item d-flex align-items-center">
                                                 <div className={item.divForPhoto + ' mr-3 userPhoto'}></div>
@@ -152,7 +157,8 @@ class Home extends Component {
                                                     <p className="far fa-clock text-secondary m-0">{item.status}</p>
                                                 </div>
                                             </li>
-                                            );
+                                            )}
+                                            return null;
                                         })
                                     }
                                 </ul>

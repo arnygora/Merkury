@@ -7,7 +7,7 @@ import Workflow from './components/Workflow';
 import Statistic from './components/Statistic';
 import Calendar from './components/Calendar/Calendar';
 import Users from './components/Users';
-import Settings from './components/Settings';
+import UsersTestPage from './components/UsersTestPage';
 import AuthorizationPage from './components/AuthorizationPage';
 import NotFoundPage from './components/NotFoundPage';
 
@@ -21,7 +21,7 @@ class App extends React.Component {
                     <PrivateLayout exact path="/statistics" component={Statistic}/>
                     <PrivateLayout exact path="/calendar" component={Calendar}/>
                     <PrivateLayout exact path="/users" component={Users}/>
-                    <PrivateLayout exact path="/settings" component={Settings}/>
+                    <PrivateLayout exact path="/settings" component={UsersTestPage}/>
                     <Route exact path="/login" component={AuthorizationPage}/>
                     <Route component={NotFoundPage}/>
                 </Switch>

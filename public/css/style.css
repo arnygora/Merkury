@@ -325,8 +325,13 @@ section {
   background: #f6f7fa;
 }
 
+section h4 {
+
+  text-shadow: 0 2px white;
+  color: #397ece;}
+
 section p {
-  font-size: 1.5em; }
+  font-size: 1.5em;}
 
 section select {
   padding: 8px 8px;
@@ -374,46 +379,35 @@ li.userItem:hover, li.list-group-item:hover {
   background: #eaeaea;
 }
 
-.uno {
+.uno, .dos, .tres, .cuatro, .cinco, .seis, .ocho  {
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  background: url("../img/John-Doe.png") 77% 2% no-repeat;
 }
+.uno {
+  background: url("../img/John-Doe.png") 77% 2% no-repeat;}
+
 .dos {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
   background: url("../img/userPhoto.jpg") 72% 15% no-repeat;
 }
+
 .tres {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
   background: url("../img/alex-smith.png") 65% 32% no-repeat;
 }
+
 .cuatro {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
   background: url("../img/ann-clooney.png") 55% 2% no-repeat;
 }
+
 .cinco {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
   background: url("../img/petric.png") 48% 2% no-repeat;
 }
+
 .seis {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
   background: url("../img/nicky.png") 56% 0 no-repeat;
 }
+
 .ocho {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
   background: url("../img/niga.png") 77% 2% no-repeat;
 }
 

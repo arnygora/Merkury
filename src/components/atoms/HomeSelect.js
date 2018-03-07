@@ -6,7 +6,7 @@ class HomeSelect extends Component {
     };
     render() {
         return (
-            <select name="sel" id="sales" onChange={this.handleChange}>
+            <select name="select" id="select" onChange={this.handleChange}>
                 {
                     this.props.data.map((item, index) => {
                     return <option key={index} value={item}>{"Period: " + item}</option>

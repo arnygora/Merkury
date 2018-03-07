@@ -8,6 +8,10 @@ let workflowList = [
         status: '3 days left',
     },
     {
+        title: 'Create mego project',
+        status: 'nearest future',
+    },
+    {
         title: 'New logo for JCD.pl',
         status: '2 days dalays',
     },
