@@ -2,8 +2,29 @@ import React from 'react';
 import Header from './Header';
 import Select from './atoms/UsersSelect';
 import userList from '../config/usersData';
+import Pagination from './atoms/Pagination'
 
 class Users extends React.Component {
+    constructor(props) {
+        super(props);
+
+        let exampleItems = userList.map((item, index) => {
+            item.id = index;
+            return item;
+        });
+
+        this.state = {
+            exampleItems: exampleItems,
+            pageOfItems: []
+        };
+    }
+    onChangePage = (pageOfItems) => {
+        this.setState({ pageOfItems: pageOfItems });
+    };
+
+
+    //sort users by filter (select button)
+
     activeUsers = userList.filter(function(user) {
         return user.active === true;
     });
@@ -67,6 +88,7 @@ class Users extends React.Component {
                                 }
                             </ul>
                         </div>
+                        <Pagination items={this.state.exampleItems} onChangePage={this.onChangePage} />
                     </section>
                 </Header>
             </div>
