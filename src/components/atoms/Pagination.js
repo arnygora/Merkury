@@ -1,5 +1,5 @@
 import React from 'react';
-import _ from 'lodash';
+import _ from 'underscore';
 
 const defaultProps = {
     initialPage: 1
@@ -10,16 +10,20 @@ class Pagination extends React.Component {
         super(props);
         this.state = { pager: {} };
     }
+
     componentWillMount() {
         if (this.props.items && this.props.items.length) {
             this.setPage(this.props.initialPage);
         }
     }
+
     componentDidUpdate(prevProps, prevState) {
+        // reset page if items array has changed
         if (this.props.items !== prevProps.items) {
             this.setPage(this.props.initialPage);
         }
     }
+
     setPage(page) {
         let items = this.props.items;
         let pager = this.state.pager;
@@ -27,14 +31,25 @@ class Pagination extends React.Component {
         if (page < 1 || page > pager.totalPages) {
             return;
         }
+
+        // get new pager object for specified page
         pager = this.getPager(items.length, page);
+
+        // get new page of items from items array
         let pageOfItems = items.slice(pager.startIndex, pager.endIndex + 1);
+
+        // update state
         this.setState({ pager: pager });
+
+        // call change page function in parent component
         this.props.onChangePage(pageOfItems);
     }
+
     getPager(totalItems, currentPage, pageSize) {
         // default to first page
         currentPage = currentPage || 1;
+
+        // default page size is 10
         pageSize = pageSize || 10;
 
         // calculate total pages
@@ -58,6 +73,7 @@ class Pagination extends React.Component {
                 endPage = currentPage + 4;
             }
         }
+
         // calculate start and end item indexes
         let startIndex = (currentPage - 1) * pageSize;
         let endIndex = Math.min(startIndex + pageSize - 1, totalItems - 1);
@@ -78,6 +94,7 @@ class Pagination extends React.Component {
             pages: pages
         };
     }
+
     render() {
         let pager = this.state.pager;
 
@@ -85,6 +102,7 @@ class Pagination extends React.Component {
             // don't display pager if there is only 1 page
             return null;
         }
+
         return (
             <ul className="pagination">
                 <li className={pager.currentPage === 1 ? 'disabled' : ''}>

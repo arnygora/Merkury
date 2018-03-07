@@ -5,8 +5,8 @@ import userList from '../config/usersData';
 import Pagination from './atoms/Pagination'
 
 class Users extends React.Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
 
         let exampleItems = userList.map((item, index) => {
             item.id = index;
@@ -68,8 +68,7 @@ class Users extends React.Component {
                         </ul>
                         <div className="bg-white">
                             <ul className="usersList">
-                                {
-                                    this.activeUsers.map((item, index) => {
+                                { this.activeUsers.map((item, index) => {
                                         return (
                                             <li key={index} className="row p-3 border m-0 align-items-center userItem">
                                                 <div className="col-12 col-md-4 col-xl-5 d-flex align-items-center">
