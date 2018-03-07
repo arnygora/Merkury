@@ -1,12 +1,33 @@
 import React from 'react';
 import Header from './Header';
 import Select from './atoms/UsersSelect';
-import UserList from '../config/usersData';
+import userList from '../config/usersData';
 
 class Users extends React.Component {
+    activeUsers = userList.filter(function(user) {
+        return user.active === true;
+    });
+    FilterUsers = (e) => {
+
+        switch(e) {
+            case "Offline" :
+                userList.filter(function(user) {
+                    return user.active === false;
+                });
+                console.log(e);
+                break;
+            case "All users" :
+                console.log(e);
+                break;
+            case "Active first" :
+                console.log(e);
+                break;
+            default:
+        }
+    };
     render() {
-        let UserSort = ["All users", "Active first", "Offline"];
-        let userCount = UserList.length;
+        let UserSort = ["Active first", "All users", "Offline"];
+        let userCount = this.activeUsers.length;
         return (
             <div>
                 <Header>
@@ -27,7 +48,7 @@ class Users extends React.Component {
                         <div className="bg-white">
                             <ul className="usersList">
                                 {
-                                    UserList.map((item, index) => {
+                                    this.activeUsers.map((item, index) => {
                                         return (
                                             <li key={index} className="row p-3 border m-0 align-items-center userItem">
                                                 <div className="col-12 col-md-4 col-xl-5 d-flex align-items-center">

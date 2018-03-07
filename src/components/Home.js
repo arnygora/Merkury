@@ -12,7 +12,6 @@ import Tasks from "../config/workflowData";
 
 class Home extends Component {
         filterSales = (bb) => {
-            console.log(this.saleChart);
             let sale = this.saleChart.getChart();
             let saleWeek = [['Websites', 3], ['logo', 9], ['Social Media', 1], ['Adwords', 7], ['E-Commerce', 5]],
                 saleMonth = [['Websites', 6], ['logo', 6], ['Social Media', 5], ['Adwords', 2], ['E-Commerce', 9]],
