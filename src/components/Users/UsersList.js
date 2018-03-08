@@ -5,7 +5,7 @@ class UsersList extends React.Component {
             <div>
                 <div className="bg-white">
                     <ul className="usersList">
-                        { this.props.data.map((item, index) => {
+                        {this.props.data.map((item, index) => {
                             return (
                                 <li key={index} className="row p-3 border m-0 align-items-center userItem">
 
@@ -18,6 +18,11 @@ class UsersList extends React.Component {
                                     <div className="col-12 col-sm-6 col-md-2 col-xl-2 phone">{item.phoneNumber}</div>
                                     <div className="col-1 dotLink">
                                         <a className="dotLink" href="">...</a>
+                                        <ul className="hoverList">
+                                            <li><a href="">Link 1</a></li>
+                                            <li><a href="">Link 2</a></li>
+                                            <li><a href="">Link 3</a></li>
+                                        </ul>
                                     </div>
                                 </li>
                             );

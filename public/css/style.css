@@ -411,6 +411,9 @@ li.userItem:hover, li.list-group-item:hover {
   background: url("../img/niga.png") 77% 2% no-repeat;
 }
 
+.dotLink {
+  display: flex;}
+
 a.dotLink {
   display: inline-block;
   margin: 0 auto;
@@ -425,7 +428,24 @@ a.dotLink:hover {
   color: #5584ff;
 }
 
-  @media screen and (max-width: 736px) {
+.hoverList {
+  visibility: hidden;
+  position: absolute;
+  width: 120px;
+  top: 50px;
+  right: 10px;
+  padding: 10px;
+  background: #fff;
+  z-index: 1000;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.47);
+  transition: visibility 1s ease-out;
+}
+
+div.dotLink:hover .hoverList {
+  visibility: visible;
+}
+
+@media screen and (max-width: 736px) {
     .usersList div.activity, li.tableHeader, div.dotLink {
       display: none;
     }

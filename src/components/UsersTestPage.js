@@ -23,7 +23,7 @@ class UsersTestPage extends React.Component {
                 <Header>
                     <section>
                         <div className="d-flex justify-content-between align-items-center mb-3">
-                            <h4>Users <span className="text-secondary">({userCount})</span></h4>
+                            <h4>BootstrapTable | Users <span className="text-secondary">({userCount})</span></h4>
                         </div>
                         <BootstrapTable data={UserList} bodyStyle={{ background: '#fff' }} hover pagination>
                             <TableHeaderColumn isKey dataField='position' dataFormat={this.userCard}>Name</TableHeaderColumn>
