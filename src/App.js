@@ -6,7 +6,7 @@ import Home from './components/Home';
 import Workflow from './components/Workflow';
 import Statistic from './components/Statistic';
 import Calendar from './components/Calendar/Calendar';
-import Users from './components/Users';
+import Users from './components/Users/UsersPage';
 import UsersTestPage from './components/UsersTestPage';
 import AuthorizationPage from './components/AuthorizationPage';
 import NotFoundPage from './components/NotFoundPage';

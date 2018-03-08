@@ -101,7 +101,7 @@ class Home extends Component {
                                                 <li key={index}
                                                     className="list-group-item d-flex justify-content-between align-items-center">
                                                     <div><span className="bg-primary counter float-left">{(item.title).charAt(0)}</span>{item.title}
-                                                        <span className="far fa-clock text-secondary d-block"> {item.status}</span>
+                                                        <span className="far fa-clock text-secondary d-block">{item.status}</span>
                                                     </div>
                                                     <div className="col-1 dotLink">
                                                         <a className="dotLink" href="">...</a>
