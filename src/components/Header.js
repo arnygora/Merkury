@@ -40,7 +40,7 @@ class Header extends Component {
                             </aside>
                         </div>
                         <div className="col-10 mainContent p-0">
-                            <header className="d-flex justify-content-between pr-3">
+                            <header className="d-flex justify-content-between pr-3 mainHeader">
                                 <div className="d-flex align-items-center">
                                     <div id="nav-icon">
                                         <span></span>
