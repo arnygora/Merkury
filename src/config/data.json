@@ -2,86 +2,77 @@
   "lanes": [
     {
       "id": "PLANNED",
-      "title": "Planned Tasks",
-      "label": "20/70",
-      "style": {"width": 280},
+      "title": "To Do",
+      "style": {"width": 280, "background": "transparent"},
       "cards": [
         {
-          "id": "Milk",
-          "title": "Buy milk",
-          "label": "15 mins",
-          "cardStyle": { "width": 270, "maxWidth": 270, "margin": "auto", "marginBottom": 5 },
-          "description": "2 Gallons of milk at the Deli store"
+          "id": "Plan1",
+          "title": "New websites for Symo.com",
+          "cardStyle": {"width": 270, "maxWidth": 270, "margin": "auto", "marginBottom": 5, "border": "1px solid #ccc" },
+          "description": "4 days left"
         },
         {
           "id": "Plan2",
-          "title": "Dispose Garbage",
-          "label": "10 mins",
-          "cardStyle": { "width": 270, "maxWidth": 270, "margin": "auto", "marginBottom": 5 },
-          "description": "Sort out recyclable and waste as needed"
+          "title": "Free business PSD Template",
+          "cardStyle": { "width": 270, "maxWidth": 270, "margin": "auto", "marginBottom": 5, "border": "1px solid #ccc" },
+          "description": "2 days left"
         },
         {
           "id": "Plan3",
-          "title": "Write Blog",
-          "label": "30 mins",
-          "cardStyle": { "width": 270, "maxWidth": 270, "margin": "auto", "marginBottom": 5 },
-          "description": "Can AI make memes?"
+          "title": "Create mego project",
+          "cardStyle": { "width": 270, "maxWidth": 270, "margin": "auto", "marginBottom": 5, "border": "1px solid #ccc" },
+          "description": "1 week dalays"
         },
         {
           "id": "Plan4",
-          "title": "Pay Rent",
-          "label": "5 mins",
-          "cardStyle": { "width": 270, "maxWidth": 270, "margin": "auto", "marginBottom": 5 },
-          "description": "Transfer to bank account"
+          "title": "New logo for JCD.pl",
+          "cardStyle": { "width": 270, "maxWidth": 270, "margin": "auto", "marginBottom": 5, "border": "1px solid #ccc" },
+          "description": "5 days dalays"
         }
       ]
     },
     {
       "id": "WIP",
-      "title": "Work In Progress",
-      "label": "10/20",
-      "style": {"width": 280},
+      "title": "In Progress",
+      "style": {"width": 280, "background": "transparent"},
       "cards": [
         {
           "id": "Wip1",
-          "title": "Clean House",
-          "label": "30 mins",
-          "cardStyle": { "width": 270, "maxWidth": 270, "margin": "auto", "marginBottom": 5 },
-          "description": "Soap wash and polish floor. Polish windows and doors. Scrap all broken glasses"
+          "title": "Free icons Set vol. 3",
+          "cardStyle": { "width": 270, "maxWidth": 270, "margin": "auto", "marginBottom": 5, "border": "1px solid #ccc" },
+          "description": "months ago"
+        },
+        {
+          "id": "Wip2",
+          "title": "New websites for Symo.com",
+          "cardStyle": {"width": 270, "maxWidth": 270, "margin": "auto", "marginBottom": 5, "border": "1px solid #ccc" },
+          "description": "4 days left"
+        },
+        {
+          "id": "Wip3",
+          "title": "Free business PSD Template",
+          "cardStyle": { "width": 270, "maxWidth": 270, "margin": "auto", "marginBottom": 5, "border": "1px solid #ccc" },
+          "description": "2 days left"
         }
       ]
     },
     {
       "id": "COMPLETED",
       "title": "Completed",
-      "style": {
-        "width": 280
+      "style": { "width": 280, "background": "transparent"
       },
-      "label": "2/5",
       "cards": [
         {
           "id": "Completed1",
-          "title": "Practice Meditation",
-          "label": "15 mins",
-          "cardStyle": {
-            "width": 270,
-            "maxWidth": 270,
-            "margin": "auto",
-            "marginBottom": 5
-          },
-          "description": "Use Headspace app"
+          "title": "Free business PSD Template",
+          "cardStyle": { "width": 270, "maxWidth": 270, "margin": "auto", "marginBottom": 5, "border": "1px solid #ccc" },
+          "description": "2 days dalays"
         },
         {
           "id": "Completed2",
-          "title": "Maintain Daily Journal",
-          "label": "15 mins",
-          "cardStyle": {
-            "width": 270,
-            "maxWidth": 270,
-            "margin": "auto",
-            "marginBottom": 5
-          },
-          "description": "Use Spreadsheet for now"
+          "title": "Free icons Set vol. 3",
+          "cardStyle": { "width": 270, "maxWidth": 270, "margin": "auto", "marginBottom": 5, "border": "1px solid #ccc" },
+          "description": "1 day left"
         }
       ]
     }

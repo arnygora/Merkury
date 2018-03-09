@@ -17,7 +17,7 @@ const handleDragEnd = (cardId, sourceLaneId, targetLaneId) => {
     console.log(`targetLaneId: ${targetLaneId}`)
 };
 
-class App extends Component {
+class Workflow extends Component {
     state = {boardData: {lanes: []}};
 
     setEventBus = eventBus => {
@@ -60,10 +60,7 @@ class App extends Component {
     handleCardAdd = (card, laneId) => {
         console.log(`New card added to lane ${laneId}`);
         console.dir(card)
-    }
-}
-
-class Workflow extends Component {
+    };
     render() {
         return (
             <div>
@@ -78,7 +75,7 @@ class Workflow extends Component {
                         eventBusHandle={this.setEventBus}
                         handleDragStart={handleDragStart}
                         handleDragEnd={handleDragEnd}
-                        style={{display: "flex", justifyContent: "center", background: "transparent"}}
+                        style={{display: "flex", justifyContent: "center", flexFlow: "row wrap", background: "transparent"}}
                     />
 
                 </section>
