@@ -1,6 +1,67 @@
 import React, { Component } from 'react';
 import Header from './Header';
-import Tasks from "../config/workflowData";
+import Board from 'react-trello';
+
+import data from '../config/data';
+
+const handleDragStart = (cardId, laneId) => {
+    console.log('drag started');
+    console.log(`cardId: ${cardId}`);
+    console.log(`laneId: ${laneId}`)
+};
+
+const handleDragEnd = (cardId, sourceLaneId, targetLaneId) => {
+    console.log('drag ended');
+    console.log(`cardId: ${cardId}`);
+    console.log(`sourceLaneId: ${sourceLaneId}`);
+    console.log(`targetLaneId: ${targetLaneId}`)
+};
+
+class App extends Component {
+    state = {boardData: {lanes: []}};
+
+    setEventBus = eventBus => {
+        this.setState({eventBus})
+    };
+
+    async componentWillMount() {
+        const response = await this.getBoard();
+        this.setState({boardData: response})
+    }
+
+    getBoard() {
+        return new Promise(resolve => {
+            resolve(data)
+        })
+    }
+
+    completeCard = () => {
+        this.state.eventBus.publish({
+            type: 'ADD_CARD',
+            laneId: 'COMPLETED',
+            card: {id: 'Milk', title: 'Buy Milk', label: '15 mins', description: 'Use Headspace app'}
+        });
+        this.state.eventBus.publish({type: 'REMOVE_CARD', laneId: 'PLANNED', cardId: 'Milk'})
+    };
+
+    addCard = () => {
+        this.state.eventBus.publish({
+            type: 'ADD_CARD',
+            laneId: 'BLOCKED',
+            card: {id: 'Ec2Error', title: 'EC2 Instance Down', label: '30 mins', description: 'Main EC2 instance down'}
+        })
+    };
+
+    shouldReceiveNewData = nextData => {
+        console.log('New card has been added');
+        console.log(nextData)
+    };
+
+    handleCardAdd = (card, laneId) => {
+        console.log(`New card added to lane ${laneId}`);
+        console.dir(card)
+    }
+}
 
 class Workflow extends Component {
     render() {
@@ -8,74 +69,18 @@ class Workflow extends Component {
             <div>
                 <Header>
                 <section>
-                    <div className="row">
-                        <div className="col-12 col-md-6 col-lg-4">
-                            <h4 className="d-flex justify-content-between align-items-center">To Do({Tasks.map.length})<span className="text-secondary"></span>
-                                <span className="fas fa-angle-right text-secondary float-right"></span>
-                            </h4>
-                            <ul className="list-group list-group-flush">
-                                {
-                                    Tasks.map ((item, index) => {
-                                        return (
-                                            <li key={index}
-                                                className="list-group-item d-flex justify-content-between align-items-center mb-2 border">
-                                                <div><span className="bg-primary counter float-left">{(item.title).charAt(0)}</span>{item.title}
-                                                    <span className="far fa-clock text-secondary d-block"> {item.status}</span>
-                                                </div>
-                                                <div className="col-1 dotLink">
-                                                    <a className="dotLink" href="">...</a>
-                                                </div>
-                                            </li>
-                                        );
-                                    })
-                                }
-                            </ul>
-                        </div>
-                        <div className="col-12 col-md-6 col-lg-4">
-                            <h4 className="d-flex justify-content-between align-items-center">In Progress <span className="text-secondary"></span>
-                                <span className="fas fa-angle-right text-secondary float-right"></span>
-                            </h4>
-                            <ul className="list-group list-group-flush">
-                                {
-                                    Tasks.map ((item, index) => {
-                                        return (
-                                            <li key={index}
-                                                className="list-group-item d-flex justify-content-between align-items-center mb-2 border">
-                                                <div><span className="bg-primary counter float-left">{(item.title).charAt(0)}</span>{item.title}
-                                                    <span className="far fa-clock text-secondary d-block"> {item.status}</span>
-                                                </div>
-                                                <div className="col-1 dotLink">
-                                                    <a className="dotLink" href="">...</a>
-                                                </div>
-                                            </li>
-                                        );
-                                    })
-                                }
-                            </ul>
-                        </div>
-                        <div className="col-12 col-md-10 col-lg-4 mx-auto">
-                            <h4 className="d-flex justify-content-between align-items-center">Completed <span className="text-secondary"></span>
-                                <span className="fas fa-angle-right text-secondary float-right"></span>
-                            </h4>
-                            <ul className="list-group list-group-flush">
-                                {
-                                    Tasks.map ((item, index) => {
-                                        return (
-                                            <li key={index}
-                                                className="list-group-item d-flex justify-content-between align-items-center mb-2 border">
-                                                <div><span className="bg-primary counter float-left">{(item.title).charAt(0)}</span>{item.title}
-                                                    <span className="far fa-clock text-secondary d-block"> {item.status}</span>
-                                                </div>
-                                                <div className="col-1 dotLink">
-                                                    <a className="dotLink" href="">...</a>
-                                                </div>
-                                            </li>
-                                        );
-                                    })
-                                }
-                            </ul>
-                        </div>
-                    </div>
+                    <Board
+                        editable
+                        onCardAdd={this.handleCardAdd}
+                        data={data}
+                        draggable
+                        onDataChange={this.shouldReceiveNewData}
+                        eventBusHandle={this.setEventBus}
+                        handleDragStart={handleDragStart}
+                        handleDragEnd={handleDragEnd}
+                        style={{display: "flex", justifyContent: "center", background: "transparent"}}
+                    />
+
                 </section>
                 </Header>
             </div>
