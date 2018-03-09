@@ -101,7 +101,7 @@ class Home extends Component {
                                                 <li key={index}
                                                     className="list-group-item d-flex justify-content-between align-items-center">
                                                     <div><span className="bg-primary counter float-left">{(item.title).charAt(0)}</span>{item.title}
-                                                        <span className="far fa-clock text-secondary d-block">{item.status}</span>
+                                                        <span className="far fa-clock text-secondary d-block">{' ' + item.status}</span>
                                                     </div>
                                                     <div className="col-1 dotLink">
                                                         <a className="dotLink" href="">...</a>
@@ -153,7 +153,7 @@ class Home extends Component {
                                                 <div className={item.divForPhoto + ' mr-3 userPhoto'}></div>
                                                 <div className="d-flex flex-column messagesItemText">
                                                     <p className="m-0">{item.userName} <span className="text-secondary">added a new project</span> Free PSD</p>
-                                                    <p className="far fa-clock text-secondary m-0">{item.status}</p>
+                                                    <p className="far fa-clock text-secondary m-0">{' ' + item.status}</p>
                                                 </div>
                                             </li>
                                             )}

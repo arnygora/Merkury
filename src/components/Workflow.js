@@ -77,7 +77,6 @@ class Workflow extends Component {
                         handleDragEnd={handleDragEnd}
                         style={{display: "flex", justifyContent: "center", flexFlow: "row wrap", background: "transparent"}}
                     />
-
                 </section>
                 </Header>
             </div>

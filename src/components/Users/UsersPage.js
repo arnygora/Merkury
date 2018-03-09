@@ -1,14 +1,14 @@
 import React from 'react';
 import Header from '../Header';
 import Select from '../atoms/UsersSelect';
-import userList from '../../config/usersData';
+import userDataList from '../../config/usersData';
 import UsersList from "./UsersList";
 import Pagination from '../atoms/Pagination'
 
 class UsersPage extends React.Component {
 
     // firstly show all active users
-    activeUsers = userList.filter((user) => {
+    activeUsers = userDataList.filter((user) => {
         return user.active;
     });
     constructor() {
@@ -20,21 +20,21 @@ class UsersPage extends React.Component {
         this.state = {
             exampleItems: exampleItems,
             pageOfItems: [],
-        };
+            activeUsers: [],
+    };
     }
     onChangePage = (pageOfItems) => {
         this.setState({ pageOfItems: pageOfItems });
     };
 
     //sort users by filter (select button)
-
-    FilterUsers = (e) => {
+    onFilterUsers = (e) => {
         if(e === "Offline") {
-           let Users = userList.filter((user) => {
+           let Users = userDataList.filter((user) => {
                 return !user.active;
             });
         } else if (e === "Active first") {
-            let Users = userList.filter((user) => {
+            let Users = userDataList.filter((user) => {
                 return user.active;
             });
         }
@@ -49,7 +49,7 @@ class UsersPage extends React.Component {
                     <section>
                         <div className="d-flex justify-content-between align-items-center">
                             <h4>Users <span className="text-secondary">({userCount})</span></h4>
-                            <Select data={UserSort} onSortByFilter={this.FilterUsers}/>
+                            <Select data={UserSort} onSortByFilter={this.onFilterUsers}/>
                         </div>
                         <ul>
                             <li className="row text-secondary tableHeader">
@@ -60,8 +60,7 @@ class UsersPage extends React.Component {
                                 <div className="col-lg-1"></div>
                             </li>
                         </ul>
-                        <UsersList data={this.state.pageOfItems}>
-                        </UsersList>
+                        <UsersList data={this.state.pageOfItems} />
                         <Pagination items={this.state.exampleItems} onChangePage={this.onChangePage} />
                     </section>
                 </Header>
