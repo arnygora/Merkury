@@ -48,11 +48,9 @@ class UsersPage extends React.Component {
             this.setState({
                 exampleItems: userDataList.map((user, index) => {
                     return user;
-
                 })
             })
         }
-
         console.log(e);
     };
 
