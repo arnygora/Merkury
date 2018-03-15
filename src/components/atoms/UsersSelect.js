@@ -1,15 +1,22 @@
 import React from 'react';
+import store from '../../redux/store';
 
 class UsersSelect extends React.Component {
     handleChange = (e) => {
-        this.props.onSortByFilter(e.target.value)
+        this.props.onSortByFilter(e.target.value);
+        store.dispatch({
+            type: 'SORT_STATUS',
+            payload: {
+                status: e.target.value
+            }
+        });
     };
     render() {
         return(
             <select name="usersSort" id="usersSort" onChange={this.handleChange}>
                 {
                     this.props.data.map((item, index) => {
-                        return <option key={index} value={item}>{"Sort: " + item}</option>
+                        return <option key={index} value={item}>Sort: {item}</option>
                     })
                 }
             </select>

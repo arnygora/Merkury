@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import Board from 'react-trello';
-
 import data from '../config/data';
 
 const handleDragStart = (cardId, laneId) => {

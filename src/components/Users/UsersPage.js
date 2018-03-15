@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Header from '../Header';
 import Select from '../atoms/UsersSelect';
 import userDataList from '../../config/usersData';
@@ -55,6 +56,8 @@ class UsersPage extends React.Component {
     };
 
     render() {
+        console.log('---log in render', this.props.statusProps);
+
         let UserSort = ["Active first", "All users", "Offline"];
         let userCount = this.state.exampleItems.length;
         return (
@@ -82,5 +85,13 @@ class UsersPage extends React.Component {
         );
     }
 }
+const mapState = (state, props) => {
+    if(state) {
+        return {
+            statusProps: state.status
+        }
+    }
+    return null
+};
 
-export default UsersPage;
+export default connect(mapState)(UsersPage);
