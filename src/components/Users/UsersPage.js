@@ -52,7 +52,6 @@ class UsersPage extends React.Component {
                 })
             })
         }
-        console.log(e);
     };
 
     render() {
@@ -86,12 +85,9 @@ class UsersPage extends React.Component {
     }
 }
 const mapState = (state, props) => {
-    if(state) {
         return {
             statusProps: state.status
         }
-    }
-    return null
 };
 
 export default connect(mapState)(UsersPage);

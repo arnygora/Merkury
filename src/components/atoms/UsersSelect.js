@@ -10,6 +10,8 @@ class UsersSelect extends React.Component {
                 status: e.target.value
             }
         });
+
+        console.log(store.getState());
     };
     render() {
         return(
